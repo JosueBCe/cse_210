@@ -1,15 +1,18 @@
 from termcolor import colored
 
-def main():
-    # Author: Josué B. Centurión  
+# Author: Josué B. Centurión
+# Program: Tic Toe Game
+# CSE 210
 
-    my_list = ["1","2","3",
-    "4","5","6",
-    "7","8","9"]
+def main():
+    
+    my_list = ["1", "2", "3",
+               "4", "5", "6",
+               "7", "8", "9"]
 
     winner = ""
     current_player = "x"
-    while winner == "": 
+    while winner == "":
 
         if (my_list[0] == my_list[1] and my_list[1] == my_list[2]) or (my_list[2] == my_list[5] and my_list[5] == my_list[8]) or (my_list[0] == my_list[3] and my_list[3] == my_list[6]) or (my_list[6] == my_list[7] and my_list[7] == my_list[8]) or (my_list[0] == my_list[4] and my_list[4] == my_list[8]) or (my_list[2] == my_list[4] and my_list[4] == my_list[6]) or (my_list[3] == my_list[4] and my_list[4] == my_list[5]) or (my_list[1] == my_list[4] and my_list[4] == my_list[7]):
             if current_player == "o":
@@ -17,46 +20,47 @@ def main():
             else:
                 winner = "O"
 
-        else: 
+        else:
             print_tic_toe(my_list)
 
-            user_input = input(f"\n{current_player}'s turn to choose a square (1-9):")
-            for i , v in enumerate(my_list):
-                if v == user_input : 
+            user_input = input(
+                f"\n{current_player}'s turn to choose a square (1-9):")
+            for i, v in enumerate(my_list):
+                if v == user_input:
                     my_list[i] = current_player
                     if current_player == "x":
                         current_player = "o"
                     else:
                         current_player = "x"
 
-        
     print_tic_toe(my_list)
     print()
     print()
-    print(colored(f"The winner is {winner} $☻♥ ","blue","on_white"))
+    print(colored(f"The winner is {winner} $☻♥ ", "blue", "on_white"))
     print()
 
 
-def print_tic_toe(my_list): 
-    for i , v in enumerate(my_list):
+def print_tic_toe(my_list):
+    for i, v in enumerate(my_list):
         i += 1
         if i % 3 == 0:
             if v == "x":
-                print(colored(f"{v}","blue"), end='')
+                print(colored(f"{v}", "blue"), end='')
             elif v == "o":
-                print(colored(f"{v}","red"), end='')
-            else: 
+                print(colored(f"{v}", "red"), end='')
+            else:
                 print(f"{v}", end='')
-                
-            if i == 3 or i == 6 :
+
+            if i == 3 or i == 6:
                 print("\n-+-+-")
         else:
             if v == "x":
-                print(colored(f"{v}|","blue"), end='')
+                print(colored(f"{v}|", "blue"), end='')
             elif v == "o":
-                print(colored(f"{v}|","red"), end='')
+                print(colored(f"{v}|", "red"), end='')
             else:
                 print(f"{v}|", end='')
+
 
 main()
 
@@ -69,6 +73,3 @@ main()
 
 while loop (i: finish the game )  
  """
-
-
-
