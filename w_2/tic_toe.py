@@ -11,7 +11,7 @@ def main():
     current_player = "x"
     while winner == "": 
 
-        if (my_list[0] == my_list[1] and my_list[1] == my_list[2]) or (my_list[2] == my_list[5] and my_list[5] == my_list[8]) or (my_list[0] == my_list[3] and my_list[3] == my_list[6]) or (my_list[6] == my_list[7] and my_list[7] == my_list[8]) or (my_list[0] == my_list[4] and my_list[4] == my_list[8]) or (my_list[2] == my_list[4] and my_list[4] == my_list[6]) or (my_list[3] == my_list[4] and my_list[4] == my_list[5]) :
+        if (my_list[0] == my_list[1] and my_list[1] == my_list[2]) or (my_list[2] == my_list[5] and my_list[5] == my_list[8]) or (my_list[0] == my_list[3] and my_list[3] == my_list[6]) or (my_list[6] == my_list[7] and my_list[7] == my_list[8]) or (my_list[0] == my_list[4] and my_list[4] == my_list[8]) or (my_list[2] == my_list[4] and my_list[4] == my_list[6]) or (my_list[3] == my_list[4] and my_list[4] == my_list[5]) or (my_list[1] == my_list[4] and my_list[4] == my_list[7]):
             if current_player == "o":
                 winner = "X"
             else:
